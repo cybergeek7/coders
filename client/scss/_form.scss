@@ -1,0 +1,33 @@
+.form-container {
+  margin-left: 170px;
+
+  h1 {
+    margin: 50px 0 40px 250px;
+  }
+
+  .form {
+    &-group {
+      margin: 1.2rem 0;
+    }
+    &-text {
+      display: block;
+      margin-top: 0.3rem;
+      color: $light;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='date'],
+    select,
+    textarea {
+      display: block;
+      width: 80%;
+      padding: 0.4rem;
+      font-size: 1.2rem;
+      border: 1px solid $light;
+      background-color: $secondary1;
+      color: $dark2;
+    }
+  }
+}

@@ -2,5 +2,5 @@ node_modules/
 config/production.json
 config/default.json
 client/build
-client/scss/
+# client/scss/
 client/.eslintcache
