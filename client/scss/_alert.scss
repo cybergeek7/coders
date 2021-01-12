@@ -1,0 +1,20 @@
+.alert {
+  padding: 0.8rem;
+  margin: 1rem;
+  opacity: 0.9;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 250px;
+  text-align: center;
+  font-weight: bold;
+
+  &-primary {
+    @include set-background($primary1);
+  }
+  &-success {
+    @include set-background($success);
+  }
+  &-danger {
+    @include set-background($umber);
+  }
+}
