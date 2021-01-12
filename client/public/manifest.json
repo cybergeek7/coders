@@ -1,0 +1,25 @@
+{
+  "short_name": "Coders",
+  "name": "Coders",
+  "icons": [
+    {
+      "src": "favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32 ",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-150x150.png",
+      "sizes": "150x150",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#ffe1c4",
+  "background_color": "#ffffff"
+}
