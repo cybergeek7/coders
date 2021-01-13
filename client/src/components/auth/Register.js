@@ -103,11 +103,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               onChange={onChange}
             />
           </div>
-          <input type='submit' className='btn btn-secondary' value='Register' />
+          <input type='submit' className='btn btn-primary' value='Register' />
         </form>
         <p className='my-1'>
           Already have an account?{' '}
-          <Link to='/login' className='text-secondary'>
+          <Link to='/login' className='text-light'>
             Sign In
           </Link>
         </p>
