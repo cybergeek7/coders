@@ -24,6 +24,7 @@
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: $light;
 }
 
 .text-primary {
@@ -48,6 +49,12 @@
   border-radius: 50%;
 }
 
+.line {
+  height: 1px;
+  background: $secondary3;
+  margin: 1.5rem 0;
+}
+
 // Backgrounds
 .bg {
   &-primary {
@@ -65,6 +72,14 @@
   &-danger {
     @include set-background($danger);
   }
+
+  &-dark {
+    @include set-background($primary3);
+  }
+
+  &-blue {
+    @include set-background($secondary3);
+  }
 }
 
 // Buttons
@@ -76,7 +91,6 @@
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: bold;
   margin-right: 0.5rem;
   outline: none;
   border-radius: 5px;
@@ -94,7 +108,7 @@
   &-primary {
     @include set-background($secondary2);
     &:hover {
-      background-color: darken($secondary2, 10%);
+      background-color: $light;
     }
   }
 
@@ -108,7 +122,40 @@
   &-light {
     @include set-background($light);
     &:hover {
-      background-color: darken($light, 20%);
+      background-color: $secondary2;
+    }
+  }
+
+  &-dark {
+    @include set-background($primary2);
+    &:hover {
+      background-color: $secondary4;
+      color: $primary1;
+    }
+  }
+
+  &-transparent {
+    background: transparent;
+    border: 2px solid $secondary3;
+    color: $secondary3;
+    border-radius: 40px;
+
+    &:hover {
+      background: transparent;
+      border: 2px solid $light;
+      color: $light;
+    }
+  }
+
+  &-transparent-light {
+    background: transparent;
+    border: 2px solid $light;
+    color: $light;
+    border-radius: 40px;
+    &:hover {
+      background: transparent;
+      border: 2px solid $primary1;
+      color: $primary1;
     }
   }
 }
