@@ -2,6 +2,7 @@
 @import 'utils';
 @import 'form';
 @import 'alert';
+@import 'profile';
 
 * {
   box-sizing: border-box;
@@ -36,11 +37,12 @@ img {
   justify-content: space-between;
   padding: 0.7rem 2rem;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   top: 0;
   border-bottom: solid 1px $danger;
   opacity: 0.9;
+  background-color: $primary2;
 
   ul {
     display: flex;
@@ -52,7 +54,7 @@ img {
     margin: 0 0.25rem;
 
     &:hover {
-      color: $danger;
+      color: $umber;
     }
   }
 
@@ -80,23 +82,5 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-}
-
-// Profiles page
-.profiles-container {
-  h1 {
-    margin-left: 350px;
-  }
-  .profile {
-    display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-gap: 2rem;
-    align-items: center;
-    padding: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    border-radius: 20px;
-    background-color: $secondary1;
   }
 }

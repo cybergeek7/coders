@@ -12,7 +12,7 @@ const ProfileItem = ({
   },
 }) => {
   return (
-    <div className='profile bg-light'>
+    <div className='profile bg-primary'>
       <img src={avatar} alt='Profile' className='round-img' />
       <div>
         <h2>{name}</h2>
@@ -26,7 +26,7 @@ const ProfileItem = ({
       </div>
       <ul>
         {skills.slice(0, 4).map((skill, index) => (
-          <li key={index} className='text-dark'>
+          <li key={index} className='text-primary'>
             <i className='fas-fa-check'></i> {skill}
           </li>
         ))}

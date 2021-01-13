@@ -27,7 +27,7 @@
 }
 
 .text-primary {
-  color: $secondary1;
+  color: $light;
 }
 
 .text-secondry {
@@ -39,6 +39,11 @@
   font-size: 1.1rem;
 }
 
+.text-umber {
+  color: $umber;
+  font-size: 1.2rem;
+}
+
 .round-img {
   border-radius: 50%;
 }
@@ -46,7 +51,7 @@
 // Backgrounds
 .bg {
   &-primary {
-    @include set-background($primary1);
+    @include set-background($primary3);
   }
 
   &-secondary {
@@ -89,7 +94,7 @@
   &-primary {
     @include set-background($secondary2);
     &:hover {
-      background-color: darken($secondary2, 5%);
+      background-color: darken($secondary2, 10%);
     }
   }
 
