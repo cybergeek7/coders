@@ -14,10 +14,15 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
         <i className='fab fa-github'></i> Github Repos
       </h2>
       {repos.map((repo) => (
-        <div key={repo.id} className='repo bg-white p-1 my-1'>
+        <div key={repo.id} className='repo bg-primary p-1 my-1'>
           <div>
             <h4>
-              <a href={repo.html_url} target='_blank' rel='noopener noreferrer'>
+              <a
+                href={repo.html_url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='lead2'
+              >
                 {repo.name}
               </a>
             </h4>

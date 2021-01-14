@@ -27,12 +27,22 @@
   color: $light;
 }
 
+.lead2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: $secondary2;
+}
+
 .text-primary {
   color: $light;
 }
 
 .text-secondary {
   color: $primary4;
+}
+
+.text-secondary2 {
+  color: $secondary3;
 }
 
 .text-light {
@@ -51,7 +61,7 @@
 
 .line {
   height: 1px;
-  background: $primary4;
+  background: $primary5;
   margin: 1.5rem 10rem;
 }
 
@@ -152,6 +162,28 @@
       border: 2px solid $light;
       color: $light;
     }
+  }
+}
+
+// Badges
+.badge {
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  text-align: center;
+  margin: 0.3rem;
+  color: $light;
+  border-radius: 5px;
+
+  &-primary {
+    background-color: $secondary1;
+  }
+
+  &-dark {
+    background-color: $primary5;
+  }
+
+  &-light {
+    background-color: $primary4;
   }
 }
 

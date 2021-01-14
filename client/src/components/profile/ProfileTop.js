@@ -14,10 +14,12 @@ const ProfileTop = ({
   <div className='profile-top bg-primary p-2'>
     <img className='round-img my-1' src={avatar} alt='' />
     <h1 className='large text-primary'>{name}</h1>
-    <p className='lead'>
+    <p className='lead text-secondary'>
       {status} {company ? <span> at {company}</span> : null}
     </p>
-    <p>{location ? <span className='text-primary'>{location}</span> : null}</p>
+    <p>
+      {location ? <span className='text-secondary'>{location}</span> : null}
+    </p>
 
     <div className='icons my-1'>
       {website ? (

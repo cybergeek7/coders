@@ -42,7 +42,7 @@
     'github github';
 
   .profile-top {
-    margin-top: 5rem;
+    margin-top: 3rem;
     grid-area: top;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@
         margin: 0 0.3rem;
 
         &:hover {
-          color: $primary1;
+          color: $secondary1;
         }
       }
     }
@@ -71,10 +71,6 @@
     grid-area: about;
     text-align: center;
     color: $light;
-
-    h2 {
-      color: $secondary4;
-    }
 
     .skills {
       display: flex;
@@ -96,7 +92,41 @@
     grid-area: edu;
   }
 
+  .profile-exp,
+  .profile-edu {
+    margin-top: 1rem;
+    & > div {
+      margin: 1rem 0;
+      padding: 1rem 0;
+      border-bottom: 1px $primary5 dotted;
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    p {
+      margin: 0.5rem 0;
+      color: $primary4;
+    }
+  }
+
   .profile-github {
     grid-area: github;
+    margin-top: 1rem;
+    .repo {
+      display: flex;
+      color: $primary4;
+
+      & > div:first-child {
+        flex: 7;
+        flex-basis: 70%;
+      }
+
+      & > div:last-child {
+        flex: 3;
+        flex-basis: 20%;
+      }
+    }
   }
 }
