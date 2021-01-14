@@ -10,11 +10,6 @@
     &-group {
       margin: 1.2rem 0;
     }
-    &-text {
-      display: block;
-      margin-top: 0.3rem;
-      color: $secondary1;
-    }
 
     input[type='text'],
     input[type='email'],
@@ -26,12 +21,12 @@
       width: 100%;
       padding: 0.4rem;
       font-size: 1.2rem;
-      border: 1px solid $primary2;
-      background-color: $secondary1;
-      color: $primary2;
+      border: 1px solid $primary4;
+      background-color: transparent;
+      color: $light;
 
       &:focus {
-        outline: 1px solid $umber;
+        outline: 1px solid $secondary2;
       }
     }
   }

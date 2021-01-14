@@ -80,7 +80,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               value={email}
               onChange={onChange}
             />
-            <small className='form-text'>
+            <small className='text-secondary'>
               This site uses Gravatar. If you want a profile image, use a
               Gravatar email
             </small>
@@ -105,7 +105,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </div>
           <input type='submit' className='btn btn-primary' value='Register' />
         </form>
-        <p className='my-1'>
+        <p className='my-1 text-secondary'>
           Already have an account?{' '}
           <Link to='/login' className='text-light'>
             Sign In

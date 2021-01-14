@@ -3,7 +3,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import img from '../../img/logo.png';
+import logoIcon from '../../img/logoIcon.png';
+import logoName from '../../img/logoName.png';
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -14,19 +15,25 @@ const Landing = ({ isAuthenticated }) => {
 
   return (
     <Fragment>
+      a
       <Helmet>
         <title>{TITLE}</title>
       </Helmet>
       <section className='landing'>
         <div className='dark-overlay'>
           <div className='landing-inner'>
-            <h1 className='x-large'>
+            {/* <h1 className='x-large'>
               {' '}
               <span>
                 <img className='logo-image' src={img}></img>
               </span>{' '}
               Coders
-            </h1>
+            </h1> */}
+            <div className='logo'>
+              <img className='logoName' src={logoName}></img>
+              <img className='logoIcon' src={logoIcon}></img>
+            </div>
+
             <p className='lead'>
               Create your profile and connect with other developers
             </p>

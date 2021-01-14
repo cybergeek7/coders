@@ -40,9 +40,8 @@ img {
   z-index: 10;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px $danger;
+  border-bottom: solid 0.1px $secondary1;
   opacity: 0.9;
-  background-color: $primary2;
 
   ul {
     display: flex;
@@ -54,7 +53,7 @@ img {
     margin: 0 0.25rem;
 
     &:hover {
-      color: $umber;
+      color: $secondary2;
     }
   }
 
@@ -63,6 +62,10 @@ img {
     height: 35px;
     margin: 0;
     padding: 0;
+
+    &:hover {
+      color: $secondary2;
+    }
   }
 }
 
@@ -71,6 +74,19 @@ img {
   position: relative;
   background: url('../src/img/showcase.jpg') no-repeat center center/cover;
   height: 100vh;
+
+  .logo {
+    .logoName {
+      width: 18rem;
+      height: 4rem;
+      white-space: nowrap;
+      margin-right: 10px;
+    }
+    .logoIcon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
 
   &-inner {
     color: $light;

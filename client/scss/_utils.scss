@@ -31,8 +31,8 @@
   color: $light;
 }
 
-.text-secondry {
-  color: $primary1;
+.text-secondary {
+  color: $primary4;
 }
 
 .text-light {
@@ -74,7 +74,7 @@
   }
 
   &-dark {
-    @include set-background($primary3);
+    @include set-background($primary1);
   }
 
   &-blue {
@@ -106,16 +106,17 @@
   }
 
   &-primary {
-    @include set-background($secondary2);
+    @include set-background($secondary1);
+    color: $light;
     &:hover {
-      background-color: $light;
+      background-color: lighten($secondary1, 5%);
     }
   }
 
   &-secondary {
-    @include set-background($secondary1);
+    @include set-background($secondary3);
     &:hover {
-      background-color: lighten($secondary1, 20%);
+      background-color: darken($secondary3, 5%);
     }
   }
 
@@ -127,7 +128,7 @@
   }
 
   &-dark {
-    @include set-background($primary2);
+    @include set-background($primary1);
     &:hover {
       background-color: $secondary4;
       color: $primary1;
