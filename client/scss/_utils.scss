@@ -59,7 +59,7 @@
 .bg {
   &-primary {
     @include set-background($primary2);
-    border: $primary4 1px solid;
+    border: $primary5 1px solid;
   }
 
   &-secondary {
