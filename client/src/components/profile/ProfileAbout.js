@@ -8,7 +8,7 @@ const ProfileAbout = ({
     user: { name },
   },
 }) => (
-  <div className='profile-about p-2'>
+  <div className='profile-about p-2 bg-primary'>
     {bio ? (
       <Fragment>
         <h2 className='text-primary'>{name.trim().split(' ')[0]}'s Bio</h2>

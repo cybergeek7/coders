@@ -51,14 +51,15 @@
 
 .line {
   height: 1px;
-  background: $secondary3;
-  margin: 1.5rem 0;
+  background: $primary4;
+  margin: 1.5rem 10rem;
 }
 
 // Backgrounds
 .bg {
   &-primary {
-    @include set-background($primary3);
+    @include set-background($primary2);
+    border: $primary4 1px solid;
   }
 
   &-secondary {
@@ -79,6 +80,11 @@
 
   &-blue {
     @include set-background($secondary3);
+  }
+
+  &-transparent {
+    background-color: transparent;
+    border: 1px solid $primary4;
   }
 }
 
@@ -137,26 +143,14 @@
 
   &-transparent {
     background: transparent;
-    border: 2px solid $secondary3;
-    color: $secondary3;
+    border: 2px solid $secondary1;
+    color: $secondary1;
     border-radius: 40px;
 
     &:hover {
       background: transparent;
       border: 2px solid $light;
       color: $light;
-    }
-  }
-
-  &-transparent-light {
-    background: transparent;
-    border: 2px solid $light;
-    color: $light;
-    border-radius: 40px;
-    &:hover {
-      background: transparent;
-      border: 2px solid $primary1;
-      color: $primary1;
     }
   }
 }

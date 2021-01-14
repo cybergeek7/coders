@@ -12,15 +12,17 @@ const ProfileItem = ({
   },
 }) => {
   return (
-    <div className='profile bg-blue'>
+    <div className='profile bg-transparent'>
       <img src={avatar} alt='Profile' className='round-img' />
       <div>
         <h2>{name}</h2>
-        <p>
+        <p className='text-secondary'>
           {status} {company && <span> at {company}</span>}
         </p>
-        <p className='my-1'>{location && <span>{location}</span>}</p>
-        <Link to={`/profile/${_id}`} className='btn btn-transparent-light'>
+        <p className='my-1 text-secondary'>
+          {location && <span>{location}</span>}
+        </p>
+        <Link to={`/profile/${_id}`} className='btn btn-transparent'>
           View Profile
         </Link>
       </div>
