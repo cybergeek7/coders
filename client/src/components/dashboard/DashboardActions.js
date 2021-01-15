@@ -11,14 +11,16 @@ const DashboardActions = () => {
         <title>{TITLE}</title>
       </Helmet>
       <div class='dash-buttons'>
-        <Link to='/edit-profile' class='btn btn-light'>
-          <i class='fas fa-user-circle text-primary'></i> Edit Profile
+        <Link to='/edit-profile' class='btn btn-transparent'>
+          <i className='fas fa-user-circle'></i> Edit Profile
         </Link>
-        <Link to='/add-experience' class='btn btn-light'>
-          <i class='fab fa-black-tie text-primary'></i> Add Experience
+        <Link to='/add-experience' class='btn btn-transparent'>
+          {' '}
+          <i className='fab fa-black-tie'></i> Add Experience
         </Link>
-        <Link to='/add-education' class='btn btn-light'>
-          <i class='fas fa-graduation-cap text-primary'></i> Add Education
+        <Link to='/add-education' class='btn btn-transparent'>
+          {' '}
+          <i className='fas fa-graduation-cap'></i> Add Education
         </Link>
       </div>
     </Fragment>

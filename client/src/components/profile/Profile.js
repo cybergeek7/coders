@@ -34,7 +34,7 @@ const Profile = ({ getProfileById, auth, profile: { profile }, match }) => {
           {auth.isAuthenticated &&
             auth.loading === false &&
             auth.user._id === profile.user._id && (
-              <Link to='/edit-profile' className='btn btn-dark'>
+              <Link to='/edit-profile' className='btn btn-transparent'>
                 Edit Profile
               </Link>
             )}
@@ -53,7 +53,7 @@ const Profile = ({ getProfileById, auth, profile: { profile }, match }) => {
                   ))}
                 </Fragment>
               ) : (
-                <h4>No experience credentials</h4>
+                <h4 className='text-secondary'>No experience credentials</h4>
               )}
             </div>
             <div className='profile-edu bg-primary p-2'>
@@ -68,7 +68,7 @@ const Profile = ({ getProfileById, auth, profile: { profile }, match }) => {
                   ))}
                 </Fragment>
               ) : (
-                <h4>No education credentials</h4>
+                <h4 className='text-secondary'>No education credentials</h4>
               )}
             </div>
 

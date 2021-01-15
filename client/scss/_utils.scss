@@ -21,6 +21,12 @@
   margin-bottom: 1rem;
 }
 
+.medium {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -43,6 +49,10 @@
 
 .text-secondary2 {
   color: $secondary3;
+}
+
+.text-secondary3 {
+  color: $secondary1;
 }
 
 .text-light {
@@ -163,6 +173,19 @@
       color: $light;
     }
   }
+
+  &-danger {
+    background: transparent;
+    border: 2px solid $danger2;
+    color: $danger2;
+    border-radius: 40px;
+
+    &:hover {
+      background: transparent;
+      border: 2px solid $light;
+      color: $light;
+    }
+  }
 }
 
 // Badges
@@ -196,7 +219,17 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.logo-image {
-  height: 60px;
-  width: 60px;
+.table {
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+    background-color: $primary2;
+    color: $primary4;
+  }
+
+  th {
+    background-color: $primary3;
+    color: $secondary3;
+  }
 }
