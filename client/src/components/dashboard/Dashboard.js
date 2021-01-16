@@ -26,10 +26,7 @@ const Dashboard = ({
         <title>{TITLE}</title>
       </Helmet>
       <div className='dashboard'>
-        <h1 className='medium text-secondary2'>
-          {' '}
-          Welcome, {user && user.name}!
-        </h1>
+        <h1 className='medium'> Welcome, {user && user.name}!</h1>
         {profile !== null ? (
           <Fragment>
             <DashboardActions />
@@ -47,7 +44,9 @@ const Dashboard = ({
           </Fragment>
         ) : (
           <Fragment>
-            <p>You have not setup a profile yet, please add some info.</p>
+            <p className='text-primary'>
+              You do not have a profile yet. Please create your profile.
+            </p>
             <Link to='/create-profile' className='btn btn-primary my-1'>
               Create Profile
             </Link>

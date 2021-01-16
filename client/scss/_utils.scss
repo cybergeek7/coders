@@ -39,6 +39,10 @@
   color: $secondary2;
 }
 
+.form-text {
+  color: $secondary4;
+}
+
 .text-primary {
   color: $light;
 }
@@ -182,8 +186,8 @@
 
     &:hover {
       background: transparent;
-      border: 2px solid $light;
-      color: $light;
+      border: 2px solid $danger;
+      color: $danger;
     }
   }
 }

@@ -8,7 +8,28 @@
 
   .form {
     &-group {
+      position: relative;
       margin: 1.2rem 0;
+
+      select {
+        background-image: url(../src/img/arrow.png);
+        background-repeat: no-repeat;
+        background-size: 1.8rem;
+        cursor: pointer;
+        line-height: 1.2;
+        background-color: $primary1;
+        background-position: right 1rem top 50%;
+
+        &:focus,
+        &:hover {
+          outline: none;
+          border: 1px solid $secondary2;
+        }
+
+        option {
+          background-color: $primary3;
+        }
+      }
     }
 
     input[type='text'],
@@ -29,9 +50,42 @@
         outline: 1px solid $secondary2;
       }
     }
-  }
 
-  .text-light:hover {
-    color: $secondary2;
+    input[type='submit'] {
+      font: inherit;
+    }
+  }
+}
+
+.text-secondary2:hover {
+  color: darken($secondary2, 5%);
+}
+
+.social-input {
+  display: flex;
+
+  i {
+    padding: 0.5rem;
+    width: 4rem;
+
+    &.fa-twitter {
+      color: #38a1f3;
+    }
+
+    &.fa-facebook {
+      color: #3b5998;
+    }
+
+    &.fa-youtube {
+      color: #c4302b;
+    }
+
+    &.fa-linkedin {
+      color: #0077b5;
+    }
+
+    &.fa-instagram {
+      color: #b500ff;
+    }
   }
 }
