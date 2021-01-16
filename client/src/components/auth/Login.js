@@ -58,7 +58,7 @@ const Login = ({ login, isAuthenticated }) => {
         </form>
         <p className='my-1 form-text'>
           Don't have an account?{' '}
-          <Link to='/register' className='text-secondary2'>
+          <Link to='/register' className='text-secondary3'>
             Sign Up
           </Link>
         </p>

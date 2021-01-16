@@ -12,6 +12,12 @@
     padding-top: 2rem;
   }
 
+  p {
+    .text-secondary3:hover {
+      color: darken($secondary3, 5%);
+    }
+  }
+
   .form {
     &-group {
       position: relative;
@@ -66,10 +72,6 @@
       background-color: $primary4;
     }
   }
-}
-
-.text-secondary2:hover {
-  color: darken($secondary2, 5%);
 }
 
 .social-input {

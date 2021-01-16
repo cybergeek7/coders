@@ -107,7 +107,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         </form>
         <p className='my-1 form-text'>
           Already have an account?{' '}
-          <Link to='/login' className='text-secondary2'>
+          <Link to='/login' className='text-secondary3'>
             Sign In
           </Link>
         </p>
