@@ -18,10 +18,10 @@ const Posts = ({ getPosts, post: { posts } }) => {
       <Helmet>
         <title>{TITLE}</title>
       </Helmet>
-      <h1 className='large text-primary'>Posts</h1>
-      <p className='lead'>
-        <i className='fas fa-user'></i> Welcome to the community!
-      </p>
+      <div className='posts-header'>
+        <h1 className='large text-primary'>Posts</h1>
+        <p className='lead'> Welcome to the community!</p>
+      </div>
       <PostForm />
       <div className='posts'>
         {posts.map((post) => (

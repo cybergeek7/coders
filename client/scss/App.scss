@@ -117,3 +117,27 @@ select {
     text-align: center;
   }
 }
+
+// Posts page
+.posts-header {
+  h1 {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  p {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+  align-items: center;
+
+  & > div:first-child {
+    text-align: center;
+  }
+}
