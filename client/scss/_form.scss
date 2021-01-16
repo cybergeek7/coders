@@ -1,9 +1,15 @@
 .form-container {
   margin: auto;
   width: 80%;
+  padding: 0.5rem 0;
 
   h1 {
     text-align: center;
+    margin-top: 1rem;
+  }
+
+  p.text-secondary {
+    padding-top: 2rem;
   }
 
   .form {
@@ -35,6 +41,7 @@
     input[type='text'],
     input[type='email'],
     input[type='password'],
+    input[type='month'],
     input[type='date'],
     select,
     textarea {
@@ -53,6 +60,10 @@
 
     input[type='submit'] {
       font: inherit;
+    }
+
+    input[type='month'] {
+      background-color: $primary4;
     }
   }
 }

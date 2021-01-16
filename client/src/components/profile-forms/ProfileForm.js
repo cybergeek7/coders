@@ -79,16 +79,15 @@ const ProfileForm = ({
         <title>{TITLE}</title>
       </Helmet>
       <div className='form-container'>
-        <h1 className='medium text-primary'>Edit Profile</h1>
         <Link className='btn btn-transparent my-1' to='/dashboard'>
           <i className='fas fa-arrow-alt-circle-left'></i> Back To Dashboard
         </Link>
+        <h1 className='medium text-primary'>Edit Profile</h1>
+
         <form className='form' onSubmit={onSubmit}>
           <div className='form-group'>
             <select name='status' value={status} onChange={onChange}>
-              <option selected='true' value='0'>
-                * Select Professional Status
-              </option>
+              <option value='0'>* Select Professional Status</option>
               <option value='Developer'>Developer</option>
               <option value='Junior Developer'>Junior Developer</option>
               <option value='Senior Developer'>Senior Developer</option>
@@ -190,7 +189,7 @@ const ProfileForm = ({
                 <i className='fab fa-twitter fa-2x'></i>
                 <input
                   type='text'
-                  placeholder='Twitter URL'
+                  placeholder='https://twitter.com/username'
                   name='twitter'
                   value={twitter}
                   onChange={onChange}
@@ -201,7 +200,7 @@ const ProfileForm = ({
                 <i className='fab fa-facebook fa-2x'></i>
                 <input
                   type='text'
-                  placeholder='Facebook URL'
+                  placeholder='https://facebook.com/username'
                   name='facebook'
                   value={facebook}
                   onChange={onChange}
@@ -212,7 +211,7 @@ const ProfileForm = ({
                 <i className='fab fa-youtube fa-2x'></i>
                 <input
                   type='text'
-                  placeholder='YouTube URL'
+                  placeholder='https://youtube.com/username'
                   name='youtube'
                   value={youtube}
                   onChange={onChange}
@@ -223,7 +222,7 @@ const ProfileForm = ({
                 <i className='fab fa-linkedin fa-2x'></i>
                 <input
                   type='text'
-                  placeholder='Linkedin URL'
+                  placeholder='https://linkedin.com/username'
                   name='linkedin'
                   value={linkedin}
                   onChange={onChange}
@@ -234,7 +233,7 @@ const ProfileForm = ({
                 <i className='fab fa-instagram fa-2x'></i>
                 <input
                   type='text'
-                  placeholder='Instagram URL'
+                  placeholder='https://instagram.com/username'
                   name='instagram'
                   value={instagram}
                   onChange={onChange}
