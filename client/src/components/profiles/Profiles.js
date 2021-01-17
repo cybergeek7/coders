@@ -22,7 +22,6 @@ const Profiles = ({ profile: { profiles, loading }, getProfiles }) => {
       ) : (
         <Fragment>
           <div className='profiles-container'>
-            <p className='lead'>Connect to a big network of developers</p>
             <div className='profiles'>
               {profiles.length > 0 ? (
                 profiles.map((profile) => (

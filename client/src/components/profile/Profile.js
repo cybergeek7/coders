@@ -29,7 +29,7 @@ const Profile = ({ getProfileById, auth, profile: { profile }, match }) => {
         <Fragment>
           <Link to='/profiles' className='btn btn-transparent'>
             {' '}
-            <i className='fas fa-arrow-alt-circle-left'></i> Back To Profiles
+            <i className='fas fa-arrow-alt-circle-left'></i> All Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&

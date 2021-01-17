@@ -19,7 +19,6 @@ const Posts = ({ getPosts, post: { posts } }) => {
         <title>{TITLE}</title>
       </Helmet>
       <div className='posts-header'>
-        <h1 className='large text-primary'>Posts</h1>
         <p className='lead'> Welcome to the community!</p>
       </div>
       <PostForm />

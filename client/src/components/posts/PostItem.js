@@ -21,49 +21,52 @@ const PostItem = ({
       <div>
         <Link to={`/profile/${user}`}>
           <img className='round-img' src={avatar} alt='' />
-          <h4>{name}</h4>
+          <h4 className='text-secondary3'>{name}</h4>
         </Link>
       </div>
       <div>
-        <p className='my-1'>{text}</p>
-        <p className='post-date'>Posted on {formatDate(date)}</p>
+        <p className='my-1 text-primary'>{text}</p>
+        <p className='text-secondary'>Posted on {formatDate(date)}</p>
 
         {showActions && (
           <Fragment>
             <Helmet>
               <title>{TITLE}</title>
             </Helmet>
-            <button
-              onClick={() => addLike(_id)}
-              type='button'
-              className='btn btn-light'
-            >
-              <i className='fas fa-thumbs-up'></i>
-              {likes.length > 0 && <span> {likes.length}</span>}
-            </button>
-            <button
-              onClick={() => removeLike(_id)}
-              type='button'
-              className='btn btn-light'
-            >
-              <i className='fas fa-thumbs-down'></i>
-            </button>
-            <Link to={`/posts/${_id}`} className='btn btn-primary'>
-              Discussion{' '}
-              {comments.length > 0 && (
-                <span className='comment-count'> {comments.length}</span>
+            <div className='reactions'>
+              <div className='like'>
+                <i
+                  onClick={() => addLike(_id)}
+                  className='fas fa-thumbs-up fa-lg'
+                ></i>
+                {likes.length > 0 && (
+                  <span className='likes-count'> {likes.length}</span>
+                )}
+              </div>
+
+              <div className='dislike'>
+                <i
+                  onClick={() => removeLike(_id)}
+                  className='fas fa-thumbs-down fa-lg'
+                ></i>
+              </div>
+
+              <div className='comment'>
+                <Link to={`/posts/${_id}`}>
+                  <i class='far fa-comment fa-lg'></i>{' '}
+                  {comments.length > 0 && (
+                    <span className='comments-count'>{comments.length}</span>
+                  )}
+                </Link>
+              </div>
+              {/* Only shows delete button if the user owns the post */}
+              {!auth.loading && user === auth.user._id && (
+                <i
+                  onClick={() => deletePost(_id)}
+                  className='delete-post fas fa-trash fa-lg'
+                ></i>
               )}
-            </Link>
-            {/* Only shows delete button if the user owns the post */}
-            {!auth.loading && user === auth.user._id && (
-              <button
-                onClick={() => deletePost(_id)}
-                type='button'
-                className='btn btn-danger'
-              >
-                <i className='fas fa-times'></i>
-              </button>
-            )}
+            </div>
           </Fragment>
         )}
       </div>

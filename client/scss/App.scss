@@ -140,4 +140,33 @@ select {
   & > div:first-child {
     text-align: center;
   }
+
+  img {
+    width: 150px;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  i {
+    color: $secondary2;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($secondary2, 10%);
+      transform: scale(1.1);
+    }
+  }
+
+  .reactions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    .comments-count {
+      color: $secondary2;
+    }
+  }
 }
