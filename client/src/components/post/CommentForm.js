@@ -7,10 +7,7 @@ const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState('');
 
   return (
-    <div className='post-form'>
-      <div className='bg-primary p'>
-        <h3>Leave a Comment</h3>
-      </div>
+    <div className='comment-form form-container'>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -23,12 +20,14 @@ const CommentForm = ({ postId, addComment }) => {
           name='text'
           cols='30'
           rows='5'
-          placeholder='Create a post'
+          placeholder='Comment on this post'
           value={text}
           onChange={(e) => setText(e.target.value)}
           required
         ></textarea>
-        <input type='submit' className='btn btn-dark my-1' value='Submit' />
+        <button className='btn btn-transparent my-1'>
+          Submit <i class='far fa-paper-plane'></i>
+        </button>
       </form>
     </div>
   );

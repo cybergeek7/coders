@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -11,27 +11,28 @@ const CommentItem = ({
   auth,
   deleteComment,
 }) => (
-  <div class='post bg-white p-1 my-1'>
-    <div>
-      <Link to={`/profile/${user}`}>
-        <img class='round-img' src={avatar} alt='' />
-        <h4>{name}</h4>
-      </Link>
-    </div>
-    <div>
-      <p class='my-1'>{text}</p>
-      <p class='post-date'>Posted on {formatDate(date)}</p>
-      {!auth.loading && user === auth.user._id && (
-        <button
-          onClick={(e) => deleteComment(postId, _id)}
-          type='button'
-          className='btn btn-danger'
-        >
-          <i className='fas fa-times'></i>
-        </button>
-      )}
-    </div>
-  </div>
+  <Fragment>
+    {/* @todo: Check if the user has a profile */}
+    <Link to={`/profile/${user}`}>
+      <div class='comment-item post p-1 my-1'>
+        <div>
+          <img class='round-img' src={avatar} alt='' />
+          <h4>{name}</h4>
+        </div>
+        <div>
+          <p class='text-primary my-1'>{text}</p>
+          <p class='text-secondary'>Posted on {formatDate(date)}</p>
+          {!auth.loading && user === auth.user._id && (
+            <i
+              onClick={(e) => deleteComment(postId, _id)}
+              type='button'
+              className='delete-comment fas fa-trash fa-lg'
+            ></i>
+          )}
+        </div>
+      </div>
+    </Link>
+  </Fragment>
 );
 
 CommentItem.propTypes = {

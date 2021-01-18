@@ -131,42 +131,141 @@ select {
   }
 }
 
-.post {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: 2rem;
-  align-items: center;
+.posts {
+  width: 80%;
+  margin: auto;
 
-  & > div:first-child {
-    text-align: center;
+  // Post Item
+  .post {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 2rem;
+    align-items: center;
+
+    & > div:first-child {
+      text-align: center;
+    }
+
+    img {
+      width: 150px;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    i {
+      color: $secondary2;
+      cursor: pointer;
+
+      &:hover {
+        color: lighten($secondary2, 10%);
+        transform: scale(1.1);
+      }
+    }
+
+    .reactions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-basis: 0.5rem;
+      margin-top: 1rem;
+      width: 100%;
+
+      .comments-count,
+      .likes-counts {
+        color: $secondary2;
+      }
+
+      .like {
+        flex-basis: 25%;
+      }
+
+      .dislike {
+        flex-basis: 25%;
+      }
+
+      .comments {
+        flex-basis: 25%;
+      }
+
+      .delete-post {
+        flex-basis: 25%;
+      }
+    }
   }
+}
 
-  img {
-    width: 150px;
-  }
+// Post page (Discussion page)
+.post-discussion {
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
 
-  h4 {
-    font-size: 1.2rem;
-  }
+  // Post Item (Component inside post page)
+  .post {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 2rem;
+    align-items: center;
+    margin-bottom: 0;
 
-  i {
-    color: $secondary2;
-    cursor: pointer;
+    & > div:first-child {
+      text-align: center;
+    }
 
-    &:hover {
-      color: lighten($secondary2, 10%);
-      transform: scale(1.1);
+    img {
+      width: 150px;
+    }
+
+    h4 {
+      font-size: 1.2rem;
     }
   }
 
-  .reactions {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
+  // Comment Form
+  .comment-form {
+    width: 90%;
 
-    .comments-count {
-      color: $secondary2;
+    button {
+      font-family: inherit;
+      width: 8rem;
+      height: 2.7rem;
+    }
+  }
+
+  .comments {
+    width: 90%;
+    margin: auto;
+    // Comment Item
+    .comment-item {
+      background-color: transparent;
+      width: 100%;
+      border: 1px $primary5 solid;
+
+      img {
+        width: 110px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        color: $secondary3;
+      }
+
+      &:hover {
+        background-color: $primary2;
+      }
+
+      .delete-comment {
+        margin-top: 1rem;
+        color: $secondary2;
+        cursor: pointer;
+
+        &:hover {
+          color: lighten($secondary2, 10%);
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import formatDate from '../../utils/formatDate';
 import { addLike, removeLike, deletePost } from '../../actions/post';
-import { Helmet } from 'react-helmet';
 
 const PostItem = ({
   post: { _id, text, name, avatar, user, likes, comments, date },
@@ -14,8 +13,6 @@ const PostItem = ({
   deletePost,
   showActions,
 }) => {
-  const TITLE = 'Posts / Coders';
-
   return (
     <div className='post bg-primary p-1 my-2'>
       <div>
@@ -30,9 +27,6 @@ const PostItem = ({
 
         {showActions && (
           <Fragment>
-            <Helmet>
-              <title>{TITLE}</title>
-            </Helmet>
             <div className='reactions'>
               <div className='like'>
                 <i
@@ -51,7 +45,7 @@ const PostItem = ({
                 ></i>
               </div>
 
-              <div className='comment'>
+              <div className='comments'>
                 <Link to={`/posts/${_id}`}>
                   <i class='far fa-comment fa-lg'></i>{' '}
                   {comments.length > 0 && (
@@ -61,10 +55,12 @@ const PostItem = ({
               </div>
               {/* Only shows delete button if the user owns the post */}
               {!auth.loading && user === auth.user._id && (
-                <i
-                  onClick={() => deletePost(_id)}
-                  className='delete-post fas fa-trash fa-lg'
-                ></i>
+                <div className='delete-post'>
+                  <i
+                    onClick={() => deletePost(_id)}
+                    className='fas fa-trash fa-lg'
+                  ></i>
+                </div>
               )}
             </div>
           </Fragment>
