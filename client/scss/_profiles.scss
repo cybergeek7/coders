@@ -18,19 +18,21 @@
     padding: 1rem;
     line-height: 1.8;
     margin-bottom: 1rem;
-    border-radius: 150px;
+    border-radius: 10px;
     color: $secondary5;
 
     img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
+      margin: auto;
     }
 
     ul {
       background-color: $primary3;
-      padding: 10px 60px;
-      border-radius: 1500px;
-      margin-right: 50px;
+      border: 1px solid $secondary1;
+      padding: 20px 30px;
+      border-radius: 10px;
+      margin: auto;
       text-align: center;
     }
   }

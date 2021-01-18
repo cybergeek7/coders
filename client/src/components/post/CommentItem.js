@@ -13,25 +13,26 @@ const CommentItem = ({
 }) => (
   <Fragment>
     {/* @todo: Check if the user has a profile */}
-    <Link to={`/profile/${user}`}>
-      <div class='comment-item post p-1 my-1'>
-        <div>
+
+    <div class='comment-item post p-1 my-1'>
+      <div>
+        <Link to={`/profile/${user}`}>
           <img class='round-img' src={avatar} alt='' />
           <h4>{name}</h4>
-        </div>
-        <div>
-          <p class='text-primary my-1'>{text}</p>
-          <p class='text-secondary'>Posted on {formatDate(date)}</p>
-          {!auth.loading && user === auth.user._id && (
-            <i
-              onClick={(e) => deleteComment(postId, _id)}
-              type='button'
-              className='delete-comment fas fa-trash fa-lg'
-            ></i>
-          )}
-        </div>
+        </Link>
       </div>
-    </Link>
+
+      <div>
+        <p class='text-primary my-1'>{text}</p>
+        <p class='text-secondary'>Posted on {formatDate(date)}</p>
+        {!auth.loading && user === auth.user._id && (
+          <i
+            onClick={(e) => deleteComment(postId, _id)}
+            className='fas fa-trash fa-lg'
+          ></i>
+        )}
+      </div>
+    </div>
   </Fragment>
 );
 

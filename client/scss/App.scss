@@ -164,6 +164,10 @@ select {
       }
     }
 
+    &:hover {
+      background-color: $primary3;
+    }
+
     .reactions {
       display: flex;
       justify-content: space-between;
@@ -235,12 +239,13 @@ select {
   }
 
   .comments {
-    width: 90%;
+    width: 100%;
     margin: auto;
+
     // Comment Item
     .comment-item {
-      background-color: transparent;
-      width: 100%;
+      width: 90%;
+      margin: auto;
       border: 1px $primary5 solid;
 
       img {
@@ -256,7 +261,7 @@ select {
         background-color: $primary2;
       }
 
-      .delete-comment {
+      i {
         margin-top: 1rem;
         color: $secondary2;
         cursor: pointer;
@@ -269,3 +274,5 @@ select {
     }
   }
 }
+
+@import 'mobile';
