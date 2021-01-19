@@ -17,9 +17,10 @@
     align-items: center;
     padding: 1rem;
     line-height: 1.8;
-    margin-bottom: 1rem;
     border-radius: 10px;
     color: $secondary5;
+    width: 80%;
+    margin: 1rem auto;
 
     img {
       width: 160px;
@@ -64,7 +65,7 @@
     .icons {
       a {
         color: $light;
-        margin: 0 0.3rem;
+        margin: 0.5rem;
 
         &:hover {
           color: $secondary1;

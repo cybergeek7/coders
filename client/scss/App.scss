@@ -141,6 +141,7 @@ select {
     grid-template-columns: 1fr 4fr;
     grid-gap: 2rem;
     align-items: center;
+    margin: 1rem auto;
 
     & > div:first-child {
       text-align: center;
@@ -172,8 +173,9 @@ select {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      text-align: center;
       flex-basis: 0.5rem;
-      margin-top: 1rem;
+      margin: 1rem auto 0;
       width: 100%;
 
       .comments-count,
@@ -200,13 +202,13 @@ select {
   }
 }
 
-// Post page (Discussion page)
+// Post Discussion page
 .post-discussion {
   width: 80%;
   margin: auto;
   margin-top: 1rem;
 
-  // Post Item (Component inside post page)
+  // Post Item (Component inside post Discussion page)
   .post {
     display: grid;
     grid-template-columns: 1fr 4fr;
